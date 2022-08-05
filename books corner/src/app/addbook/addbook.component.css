@@ -1,0 +1,19 @@
+.postdata {
+  margin: auto;
+  border: 3px solid black;
+  width: 80vh;
+  margin-top: 5%;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+  background-color: rgb(227, 239, 235);
+}
+label {
+  color: black;
+  font-size: 20px;
+  font-family: bold;
+}
+.close {
+  margin-left: 30px;
+}

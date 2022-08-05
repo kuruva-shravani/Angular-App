@@ -1,0 +1,96 @@
+<div>
+  <div class="back">
+    <button class="btn btn-info" routerLink="/">GoBack</button>
+  </div>
+  <div class="main-container">
+    <div class="container" [ngClass]="showmodal ? 'opacity-control' : ''">
+      <div class="row">
+        <div class="col-ms-8">
+          <table class="table">
+            <thead class="tablehead">
+              <tr>
+                <th>Id</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Edit User</th>
+                <th>Delete User</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let details of tabledetails; let i = index">
+              <tr>
+                <td>{{ i + 1 }}</td>
+                <td>{{ details.username }}</td>
+                <td>{{ details.email }}</td>
+                <td>
+                  <button class="btn btn-info">
+                    <span
+                      class="editbtn"
+                      data-toggle="modal"
+                      data-target="#showmodal"
+                      style="font-size: 16px"
+                      class="glyphicon glyphicon-pencil"
+                      (click)="openmodal(details)"
+                    >
+                      Edit</span
+                    >
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-danger">
+                    <span
+                      style="font-size: 16px"
+                      class="glyphicon glyphicon-trash"
+                      (click)="ondelete(details.email)"
+                    >
+                      Delete</span
+                    >
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------MODAL POPUP------------------------------------------>
+  <div class="popup-container" *ngIf="showmodal">
+    <h2>Edit User</h2>
+    <hr />
+
+    <div [formGroup]="homeform">
+      <div>
+        <label>UserName</label><br />
+        <input
+          type="text"
+          formControlName="username"
+          [(ngModel)]="detailsObject.username"
+        />
+      </div>
+
+      <div>
+        <label>Email</label><br />
+        <input
+          type="text"
+          formControlName="email"
+          [(ngModel)]="detailsObject.email"
+          disabled
+        />
+      </div>
+    </div>
+
+    <br />
+    <div>
+      <button
+        class="spacebtn"
+        class="btn btn-success"
+        (click)="updateUserData()"
+        [disabled]="detailsObject.username.length === 0"
+      >
+        Update
+      </button>
+      <button class="btn btn-danger" (click)="closeModal()">Close</button>
+    </div>
+  </div>
+</div>

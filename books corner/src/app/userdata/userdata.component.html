@@ -1,0 +1,151 @@
+<div>
+  <nav class="navblock">
+    <h3>Get userData Here!</h3>
+    <!-- <button type="submit" class="postbtn" (click)="openmodal()">
+      Post Data
+    </button> -->
+    <button class="btn btn-warning" routerLink="/addbook">postdata</button>
+  </nav>
+
+  <!-------------Fetch user data------------------>
+  <div class="container" [ngClass]="editusermodal ? 'opacity-control' : ''">
+    <div class="cont">
+      <ul *ngFor="let book of bookdetails">
+        <p><label>BookName:</label> {{ book.bookname }}</p>
+        <p><label>Genre :</label> {{ book.genre }}</p>
+        <p><label>Author :</label>{{ book.author }}</p>
+        <p><label>Publisher :</label>{{ book.publisher }}</p>
+        <div class="button">
+          <button class="btn btn-danger" (click)="deleteuser(book.id)">
+            Delete User
+          </button>
+          <button
+            class="btn btn-success"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            (click)="openeditmodal(book)"
+          >
+            Edit User
+          </button>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--------------------------------Modal for postdata------------>
+
+<!-- <div id="httpdata" class="popup-container" *ngIf="showmodal">
+  <h3>post New Data here!...</h3>
+  <hr />
+
+  <form #postdata="ngForm" (ngSubmit)="postData(postdata.value)">
+    <label>BookName :</label>
+    <input type="text" name="bookname" ngModel />
+
+    <hr />
+
+    <label>Genre :</label>
+    <input type="text" name="genre" ngModel />
+
+    <hr />
+
+    <label>Author : </label>
+    <input type="text" name="author" ngModel />
+
+    <hr />
+
+    <label>Publisher : </label>
+    <input type="text" name="publisher" ngModel />
+
+    <hr />
+    <div>
+      <button
+        type="submit"
+        [disabled]="postdata.valid == ''"
+        class="btn btn-primary"
+      >
+        Post Data
+      </button>
+
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="closemodal(postdata.value)"
+      >
+        close
+      </button>
+    </div>
+  </form>
+</div> -->
+
+<!-- Edit Modal -->
+
+<div class="editmodal-container" *ngIf="editusermodal">
+  <h3>UpdateData here!...</h3>
+  <br />
+  <hr />
+
+  <br />
+  <div [formGroup]="bookInfo">
+    <div>
+      <label style="color: black">BookName</label>
+      <input
+        type="text"
+        formControlName="bookname"
+        [(ngModel)]="bookDataObject.bookname"
+      />
+    </div>
+    <br />
+    <div>
+      <label style="color: black">Genre</label>
+      <input
+        type="text"
+        formControlName="genre"
+        [(ngModel)]="bookDataObject.genre"
+      />
+    </div>
+    <br />
+    <div>
+      <label style="color: black">Author</label>
+      <input
+        type="text"
+        formControlName="author"
+        [(ngModel)]="bookDataObject.author"
+      />
+    </div>
+    <br />
+    <div>
+      <label style="color: black">Publisher</label>
+      <input
+        type="text"
+        formControlName="publisher"
+        [(ngModel)]="bookDataObject.publisher"
+      />
+    </div>
+    <br />
+  </div>
+
+  <br />
+  <div>
+    <button
+      class="spacebtn"
+      class="btn btn-success"
+      [disabled]="
+        userDataObject.username.length === 0 &&
+        userDataObject.email.length === 0 &&
+        userDataObject.company.length === 0
+      "
+      (click)="updateuser()"
+    >
+      Update
+    </button>
+    <button class="btn btn-danger" (click)="closeeditmodal()">Close</button>
+  </div>
+</div>
+
+<h1 class="errormsg" [innerText]="errormsg"></h1>
+
+<h1 class="textmsg" *ngIf="bookdetails.length === 0">
+  Rack is Empty Please fill with Books
+</h1>

@@ -1,0 +1,51 @@
+.tablehead {
+  background-color: rgb(73, 70, 70);
+  font-family: bold;
+  font-size: 20px;
+  padding: 10px 10px;
+  color: white;
+}
+tbody:nth-child(odd) {
+  background-color: #d8d8d8;
+}
+.editbtn {
+  font-size: 16px;
+}
+.back > button {
+  float: right;
+  right: 10px;
+  margin-top: 20px;
+}
+.container > .row {
+  margin-top: 70px;
+}
+
+/* .main-container {
+  position: relative;
+} */
+
+.opacity-control {
+  opacity: 0.1;
+}
+
+.popup-container {
+  text-align: center;
+  width: 400px;
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #c8d5e3;
+  padding: 20px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+button,
+.spacebtn {
+  margin-right: 20px;
+}

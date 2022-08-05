@@ -1,0 +1,55 @@
+<div class="login">
+  <h2>Login Here...!</h2>
+  <hr />
+  <form [formGroup]="loginForm" (ngSubmit)="getdata()">
+    <div class="form-group">
+      <label for="username">UserName: </label><br />
+      <input
+        formControlName="username"
+        class="form-control"
+        type="text"
+        placeholder="Enter UserName"
+      />
+      <div
+        class="errmsg"
+        *ngIf="
+          !loginForm.get('username').valid && loginForm.get('username').touched
+        "
+      >
+        Enter username
+      </div>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+      <label for="password">Password: </label><br />
+      <input
+        formControlName="password"
+        class="form-control"
+        type="password"
+        placeholder="enter password"
+      />
+      <div
+        class="errmsg"
+        *ngIf="
+          !loginForm.get('password').valid && loginForm.get('password').touched
+        "
+      >
+        Enter password
+      </div>
+    </div>
+
+    <br />
+    <div class="form-group">
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+      <span> <a routerLink="/register">Register</a></span>
+    </div>
+  </form>
+</div>

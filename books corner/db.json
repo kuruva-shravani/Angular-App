@@ -1,0 +1,60 @@
+{
+  "books": [
+    {
+      "id": 3,
+      "bookname": "Girl in Room No-105",
+      "genre": "Suspense ",
+      "author": "Chetan Bhagat",
+      "publisher": "Westland Books"
+    },
+    {
+      "id": 4,
+      "bookname": "The Boy Who Loved",
+      "genre": "Romantic",
+      "author": "Durjoy Datta",
+      "publisher": " Penguin Random House India"
+    },
+    {
+      "bookname": "The Woman in the Window",
+      "genre": "Thriller",
+      "author": " AJ Finn",
+      "publisher": "William Morrow",
+      "id": 5
+    },
+    {
+      "bookname": "The white Tiger",
+      "genre": "Mystery",
+      "author": "Aravind Adiga",
+      "publisher": "Simon & Schuster.",
+      "id": 6
+    },
+    {
+      "bookname": "Every one has a Story - 2",
+      "genre": "Romantic",
+      "author": "savi sharma",
+      "publisher": "Westland books",
+      "id": 7
+    },
+    {
+      "bookname": "Gone Girl",
+      "genre": "Thriller",
+      "author": "Gillian Flynn",
+      "publisher": "Crown Publishing Group",
+      "id": 8
+    },
+    {
+      "bookname": "The Silent Petient",
+      "genre": "Thriller",
+      "author": "Alex Machilides",
+      "publisher": "Caledon Books",
+      "id": 9
+    },
+    {
+      "bookname": "Something you Never Told",
+      "genre": "Romantic",
+      "author": "savi sharma",
+      "publisher": "William Morrow",
+      "id": 10
+    }
+  ]
+}

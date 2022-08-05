@@ -1,0 +1,32 @@
+.login {
+  border: 2px solid black;
+  padding: 20px;
+  margin: auto;
+  width: 100vh;
+  margin-top: 10%;
+  border-radius: 10px;
+  background-color: #78c9b9;
+  color: #cfff;
+}
+label {
+  font-size: 16px;
+}
+h2 {
+  text-align: center;
+}
+hr {
+  border-top: 2px solid white;
+}
+.span {
+  font-size: 20px;
+}
+input {
+  color: black;
+}
+a {
+  cursor: pointer;
+  margin-left: 20px;
+}
+.errmsg {
+  color: red;
+}

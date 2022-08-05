@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "empid": 1,
+      "username": "shravani",
+      "email": "shravani@gmail.com",
+      "password": "shravani",
+      "company": "FSLB"
+    },
+    {
+      "empid": 2,
+      "username": "ramya",
+      "email": "ramya@gmail.com",
+      "password": "Ramyakrishna",
+      "company": "google"
+    },
+    {
+      "empid": 3,
+      "username": "priya",
+      "email": "priya@gmail.com",
+      "password": "priyasai",
+      "company": "DXC"
+    },
+    {
+      "empid": 4,
+      "username": "yerun",
+      "email": "yerun@gmail.com",
+      "password": "yerun",
+      "company": "Legato"
+    },
+    {
+      "empid": 5,
+      "username": "ram",
+      "email": "ram@gmail.com",
+      "password": "jyothiram",
+      "company": "Wipro"
+    },
+    {
+      "empid": 6,
+      "username": "sanjay",
+      "email": "sanjay@gmail.com",
+      "password": "sanjay",
+      "company": "Capgemini"
+    },
+    {
+      "empid": 7,
+      "username": "deepak",
+      "email": "deepak@gmail.com",
+      "password": "deepak",
+      "company": "FSLB"
+    },
+    {
+      "empid": 8,
+      "username": "hari",
+      "email": "hari@gmail.com",
+      "password": "hari",
+      "company": "Jp morgan"
+    },
+    {
+      "empid": 9,
+      "username": "mani",
+      "email": "mani@gmail.com",
+      "password": "mani",
+      "company": "Jp morgan"
+    },
+    {
+      "empid": 10,
+      "username": "akhil",
+      "email": "akhil@gmail.com",
+      "password": "akhil",
+      "company": "google"
+    }
+  ]
+}

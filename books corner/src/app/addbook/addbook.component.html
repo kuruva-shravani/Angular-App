@@ -1,0 +1,36 @@
+<div class="container postdata">
+  <form #postdata="ngForm" (ngSubmit)="postData(postdata.value)">
+    <label>BookName :</label>
+    <input type="text" name="bookname" ngModel />
+
+    <hr />
+
+    <label>Genre :</label>
+    <input type="text" name="genre" ngModel />
+
+    <hr />
+
+    <label>Author : </label>
+    <input type="text" name="author" ngModel />
+
+    <hr />
+
+    <label>Publisher : </label>
+    <input type="text" name="publisher" ngModel />
+
+    <hr />
+    <div>
+      <button
+        type="submit"
+        [disabled]="postdata.valid == ''"
+        class="btn btn-primary"
+      >
+        Post Data
+      </button>
+
+      <button type="submit" class="btn btn-success close" routerLink="/">
+        close
+      </button>
+    </div>
+  </form>
+</div>
